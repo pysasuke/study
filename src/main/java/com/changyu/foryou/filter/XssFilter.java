@@ -19,18 +19,18 @@ import com.changyu.foryou.tools.XssHttpServletRequestWraper;
  */
 public class XssFilter implements Filter{
 
-	@Override
+//	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		
 	}
 
-	@Override
+//	@Override
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
 		  chain.doFilter(new XssHttpServletRequestWraper((HttpServletRequest) request), response);
 	}
 
-	@Override
+//	@Override
 	public void destroy() {
 		
 	}
