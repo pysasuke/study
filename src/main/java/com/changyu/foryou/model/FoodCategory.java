@@ -6,10 +6,10 @@ import java.util.List;
  * 食品类别
  */
 public class FoodCategory {
-    private Integer categoryId;
-    private Integer campusId;
+    private Integer categoryId; //分类id
+    private Integer campusId;//校区id
     
-    private String category;
+    private String category;//分类名称
 
     private String imgUrl;
 
@@ -19,7 +19,7 @@ public class FoodCategory {
     
     private Short serial;
     
-    private Short isOpen;
+    private Short isOpen; //isOpen是否开通
 
     private List<FoodCategory> child;
     

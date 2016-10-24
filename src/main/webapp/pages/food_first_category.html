@@ -46,6 +46,7 @@
 							<i class="glyphicon glyphicon-minus"></i>
 						</button>
 					</div>
+					<!--data-show-columns   是否显示 内容列下拉框-->
 					<table id="table" 
 					data-id-field="categoryId"         
 					data-toolbar="#toolbar"
@@ -193,6 +194,7 @@ var campusId = getCookie("campusId");
     }
 
     window.operateEvents = {
+		//开通
         'click .like': function (e, value, row, index) {
         	
             //alert('You click like icon, row: ' + JSON.stringify(row));
@@ -217,6 +219,7 @@ var campusId = getCookie("campusId");
             }
             //alert(row.isOpen);
         },
+		//关闭
         'click .remove': function (e, value, row, index) {
         	//alert('You click like icon, row: ' + JSON.stringify(row));
         	if(row.serial>0&&row.serial<9){
@@ -328,6 +331,7 @@ var campusId = getCookie("campusId");
 		$(function(){
 				var campusId = getCookie("campusId");
 				$.post("../service/updateFoodCategory.do", {
+					//参数
 					campusId : campusId,
 					categoryId : categoryId,
 					categoryName : categoryName,

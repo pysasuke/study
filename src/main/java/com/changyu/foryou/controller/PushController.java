@@ -37,7 +37,7 @@ public class PushController {
     
 	@RequestMapping(value="pushPlatForm")
 	private @ResponseBody String pushPlatForm(@RequestParam String push_data,@RequestParam Integer campusId,String pushDeviceAndroid,String pushDeviceIos,String alert, String phone) {
-
+		//设置appkey和secret
 		JPushClient jpushClient = new JPushClient(masterSecret, appKey, 1);
 		PushPayload payload=null;
 		
